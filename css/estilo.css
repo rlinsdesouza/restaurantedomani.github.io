@@ -1,3 +1,17 @@
+/*<--------------- geral --------------->*/
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
 
 body {
   /*font-family: 'Indie Flower', cursive;*/
@@ -5,33 +19,12 @@ body {
   margin: 0;
 }
 
-header {
-  background-image: url(../imagens/salaodomani.JPG);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  color: rgb(255, 255, 255);
-}
-
-header a:visited {
-  color: rgb(255, 255, 255);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-}
-
 .redesSocias {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   text-align: center;
   padding-left:15px;
   background-color: rgb(0, 0, 0);
-  color: white;
 }
 .redesSocias ul {
   display: flex;
@@ -48,11 +41,60 @@ footer {
   margin-right: 10px;
 }
 
+.pages,.home,.redesSocias,footer,header a, a:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/*.menu a:hover {
+  background-color: rgb(140, 134, 134);
+}*/
+.pages {
+  background-image: linear-gradient(to bottom, rgb(0, 0,0), rgb(252, 252, 252));
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.domaniPagina,.bemVindo h1 {
+  font-family: 'Indie Flower', cursive;
+}
+
+.nomePagina {
+  grid-area: nomePagina;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.nomePagina i {
+  font-size: 2em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+
+
+/*<--------- home ----------------->*/
+
+.home {
+  background-image: url(../imagens/salaodomani.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
 .menu {
   display: flex;
   justify-content: space-around;
-  height: 10%;
-  font-size: 1.5em;
+  justify-content: center;
+  font-size: 1.1em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*.menu span{
@@ -79,7 +121,7 @@ footer {
 }
 
 .bemVindo h1 {
-    font-family: 'Indie Flower', cursive;
+    /*font-family: 'Indie Flower', cursive;*/
     font-size: 6em;
     margin: 0;
 }
@@ -159,19 +201,6 @@ footer {
   animation-duration: 2s;
   animation-name: pulse;
 }
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
 
 main i {
   color: rgb(246, 128, 5);
@@ -187,13 +216,94 @@ main i {
   font-size: 2.5em;
 }
 
-@media all and (max-width: 400px) {
 
+/*<-------------- Sobre ----------------------->*/
 
-
+.mainSobre {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr;
+  grid-template-areas:    ". nomePagina nomePagina ."
+                          ". fotoantiga1 parte1sobre ."
+                          ". parte2sobre fotoantiga2 ."
+                          ". fotoantiga3 parte3sobre .";
+  grid-column-gap: 50px;
+  grid-row-gap: 35px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-@@media all and (min-width: 1000px) {
-
-
+.imagensSobre1,.imagensSobre2,.imagensSobre3 {
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0,0,0);
+  background-blend-mode: luminosity;
 }
+
+.imagensSobre1:hover,.imagensSobre2:hover,.imagensSobre3:hover {
+  background-blend-mode: normal;
+  animation-duration: 2s;
+  animation-name: pulse;
+}
+
+.imagensSobre1 {
+  background-image: url(../imagens/fachadaantiga.jpg);
+  grid-area: fotoantiga1;
+}
+
+.textosSobre1 {
+  grid-area: parte1sobre;
+}
+
+.textosSobre2 {
+  grid-area: parte2sobre;
+}
+
+.imagensSobre2 {
+  background-image: url(../imagens/salaoantigo.jpg);
+  grid-area: fotoantiga2;
+}
+
+.textosSobre3 {
+  grid-area: parte3sobre;
+}
+
+.imagensSobre3 {
+  grid-area: fotoantiga3;
+  background-image: url(../imagens/salaosuperiornovo.jpg);
+}
+
+
+
+/*<-------------- Localização ----------------------->*/
+.mainLocalizacao {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 10px;
+  grid-template-areas:    " . nomePagina nomePagina . "
+                          " . textoEndereco mapa . ";
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color:rgb(252, 252, 252);
+}
+
+.textoEndereco {
+  grid-area: textoEndereco;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.textoEndereco * {
+  margin: 2px;
+}
+
+.mapa {
+  grid-area: mapa;
+}
+
+
+
+/*<-------------- Contato ----------------------->*/
