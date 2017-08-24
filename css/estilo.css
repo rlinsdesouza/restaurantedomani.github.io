@@ -1,0 +1,199 @@
+
+body {
+  /*font-family: 'Indie Flower', cursive;*/
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-image: url(../imagens/salaodomani.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+}
+
+header a:visited {
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.redesSocias {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left:15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.redesSocias ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.redesSocias *{
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.redesSocias li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  height: 10%;
+  font-size: 1.5em;
+}
+
+/*.menu span{
+  background-image: url(../imagens/logo.jpg);
+  background-size: center;
+  background-position: center;
+  width: 200px;
+}*/
+
+.menu ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+}
+
+.bemVindo {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bemVindo h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 6em;
+    margin: 0;
+}
+
+.bemVindo h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.bemVindo h3 {
+    font-size: 1.5em;
+    margin-right: 40%;
+    margin-bottom: 0;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 35px;
+  grid-template-areas:    " . sobreTestimonial imagemTestimonial1 . "
+                          " . sobreTestimonial imagemTestimonial2 . ";
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color:rgb(252, 252, 252);
+}
+
+.sobreTestimonial {
+  grid-area: sobreTestimonial;
+}
+
+.imagemTestimonial1 {
+  grid-area: imagemTestimonial1;
+  background-image: url(../imagens/salaosuperior.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.imagemTestimonial2 {
+  grid-area: imagemTestimonial2;
+  background-image: url(../imagens/balcaosalada.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.imagensBalcoes {
+  display: flex;
+}
+
+.imagensBalcoesSalada {
+  background-image: url(../imagens/saladas3.JPG);
+}
+
+.imagensBalcoesPratosQuentes {
+  background-image: url(../imagens/balcaoquente.JPG);
+}
+
+.imagensBalcoesChapa {
+  background-image: url(../imagens/grelhados1.JPG);
+}
+
+.imagensBalcoes div {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(252, 252, 252);
+  font-size: 2em;
+}
+
+.imagensBalcoes div:hover {
+  animation-duration: 2s;
+  animation-name: pulse;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+main i {
+  color: rgb(246, 128, 5);
+}
+
+.venhaVisitar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color:rgb(252, 252, 252);
+  height: 450px;
+  font-size: 2.5em;
+}
+
+@media all and (max-width: 400px) {
+
+
+
+}
+
+@@media all and (min-width: 1000px) {
+
+
+}
