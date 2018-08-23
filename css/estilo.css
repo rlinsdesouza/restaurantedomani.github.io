@@ -13,7 +13,7 @@
   }
 }
 
-body {
+.bodyr {
   /*font-family: 'Indie Flower', cursive;*/
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
@@ -34,6 +34,7 @@ body {
 .redesSocias *{
   margin-top: 1px;
   margin-bottom: 1px;
+  color: white;
 }
 
 .redesSocias li {
@@ -41,13 +42,13 @@ body {
   margin-right: 10px;
 }
 
-.pages,.home,.redesSocias,footer,header a, a:visited {
-  color: rgb(255, 255, 255);
+.pages,.home,.footerr, header a {
+  color: white  ;
   text-decoration: none;
 }
 
 .menu a:hover {
-  color: rgb(246, 128, 5); 
+  color: rgb(246, 128, 5);
 }
 
 .pages {
@@ -73,16 +74,13 @@ body {
   font-size: 2em;
 }
 
-footer {
+ .footerr {
   height: 20px;
   font-size: 0.7em;
   display: flex;
   justify-content: center;
   text-align: center;
   background-color: rgb(0, 0, 0);
-}
-
-footer *{
   margin: 0px 5px 0px 5px;
 }
 
