@@ -115,35 +115,12 @@ main i {
 } */
 
 /*<-------------- Localização ----------------------->*/
-.mainLocalizacao {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 10px;
-  grid-template-areas:    " . nomePagina nomePagina . "
-                          " . textoEndereco mapa . ";
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background-color:rgb(252, 252, 252);
-}
 
-.textoEndereco {
-  grid-area: textoEndereco;
+.localizacao {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
 }
-
-.textoEndereco * {
-  margin: 2px;
-}
-
-.mapa {
-  grid-area: mapa;
-}
-
-
 
 /*<-------------- Contato ----------------------->*/
 
