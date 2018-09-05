@@ -1,5 +1,5 @@
 /*<--------------- geral --------------->*/
-@keyframes pulse {
+/* @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
   }
@@ -13,11 +13,11 @@
   }
 }
 
-.bodyr {
-  /*font-family: 'Indie Flower', cursive;*/
+ .bodyr {
+  font-family: 'Indie Flower', cursive;
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
-}
+}  */
 
 .redesSocias {
   display: flex;
